@@ -25,7 +25,7 @@ npm install -g @angular/cli
 1 Clone the repo
 
 ```
-git clone https://bitbucket.org/Soytul/web_ferretero/src/master/
+git clone https://github.com/marvinmorelo/frontend-devskillsadv.git
 ```
 
 2 Install NPM packages
