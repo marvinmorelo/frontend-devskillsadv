@@ -1,0 +1,44 @@
+<form class="form-data" [formGroup]="clientForm">
+    <p class="error-message" *ngIf="showError">{{ error }}</p>
+    <div class="form-row">
+        <label for="firstName">First Name</label>
+        <input 
+            type="text" 
+            formControlName="firstName"
+            [ngClass]="{'input-error': clientForm.get('firstName')?.invalid && clientForm.get('firstName')?.dirty && clientForm.get('firstName')?.touched}"
+        >
+        <span class="input-error-text" *ngIf="clientForm.get('firstName')?.dirty && clientForm.get('firstName')?.invalid">Required field</span>
+    </div>
+    <div class="form-row">
+        <label for="lastName">Last Name</label>
+        <input 
+            type="text" 
+            formControlName="lastName"
+            [ngClass]="{'input-error': clientForm.get('lastName')?.invalid && clientForm.get('lastName')?.dirty}"
+        >
+        <span class="input-error-text" *ngIf="clientForm.get('lastName')?.dirty && clientForm.get('lastName')?.invalid">Required field</span>
+    </div>
+    <div class="form-row">
+        <label for="address">Address</label>
+        <input 
+            type="text" 
+            formControlName="address"
+            [ngClass]="{'input-error': clientForm.get('address')?.invalid && clientForm.get('address')?.dirty}"
+        >
+        <span class="input-error-text" *ngIf="clientForm.get('address')?.dirty && clientForm.get('address')?.invalid">Required field</span>
+    </div>
+    <div class="form-row">
+        <label for="ssn">SSN</label>
+        <input 
+            type="text" 
+            formControlName="ssn"
+            [ngClass]="{'input-error': clientForm.get('ssn')?.invalid && clientForm.get('ssn')?.dirty}"
+        >
+        <span class="input-error-text" *ngIf="clientForm.get('ssn')?.dirty && clientForm.get('ssn')?.invalid">Must have the following format: ###-##-####</span>
+    </div>
+</form>
+
+<div class="container-buttons">
+    <button class="button button--secondary" (click)="clientForm.reset()">Reset</button>
+    <button class="button" (click)="saveClient()" [disabled]="clientForm.invalid">Send</button>
+</div>

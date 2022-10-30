@@ -1,0 +1,27 @@
+<div class="container home">
+    <h1 class="home-title">Listado de Clientes</h1>
+    <div class="home-sections">
+        <div class="data-form">
+            <app-form-data (clientSaved)="updateData($event)"></app-form-data>
+        </div>
+        <div class="divider"></div>
+        <div class="list-table">
+            <table class="table">
+                <thead>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Address</th>
+                    <th>SSN</th>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let client of clients; trackBy: trackByItems">
+                        <td>{{ client.firstName }}</td>
+                        <td>{{ client.lastName }}</td>
+                        <td>{{ client.address }}</td>
+                        <td>{{ client.ssn }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>    
+</div>

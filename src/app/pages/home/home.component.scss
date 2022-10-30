@@ -1,0 +1,51 @@
+.home {
+    padding: 20px 0 70px;
+    .home-title {
+        font-size: 34px;
+        color: #ea7f0a;
+        text-transform: uppercase;
+        font-weight: normal;
+        text-align: center;
+        margin: 3rem 0 2rem 7rem;
+    }
+    .home-sections {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        margin-top: 1rem;
+        .data-form {
+            border-radius: 10px;
+            background-color: rgb(243, 238, 233);
+            padding: 40px 40px 80px;
+        }
+        .divider {
+            width: 3px;
+            background: #eee;
+        }
+        .list-table {
+            flex-grow: 1;
+            border-radius: 10px;
+            background-color: rgb(243, 238, 233);
+            padding: 40px 40px 80px;
+            .table {
+                width: 100%;
+                border: 2px solid white;
+                border-radius: 15px;
+                padding: 15px;
+                thead {
+                    background: linear-gradient(90deg, #d2621a 0%, #ffa748 100%);
+                    th {
+                        padding: 10px 0;
+                        color: white;
+                    }
+                }
+                tbody {
+                    td {
+                        padding: 10px;
+                        border-bottom: 1px solid #ccc;
+                    }
+                }
+            }
+        }
+    }
+}
